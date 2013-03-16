@@ -1,4 +1,5 @@
 #include "Player.h"
+//#define Fly
 
 Player::Player(int level)
 {
@@ -27,7 +28,7 @@ bool Player::init()
 		return false;
 	}
 
-	level1 = new Level(10, 10);
+	level1 = new Level(100, 50);
 	level1->Init();
 
 	bool result = true;

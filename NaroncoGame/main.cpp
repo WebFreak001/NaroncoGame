@@ -352,10 +352,7 @@ int WINAPI WinMain(	HINSTANCE	hInstance,
 	MSG		msg;
 	BOOL	done=FALSE;
 
-	if (MessageBox(NULL,"Would You Like To Run In Fullscreen Mode?", "Start FullScreen?",MB_YESNO|MB_ICONQUESTION)==IDNO)
-	{
-		fullscreen=FALSE;
-	}
+	fullscreen = false;
 
 	if (!CreateGLWindow("Clancorate", 800, 600, 16, fullscreen))
 	{
