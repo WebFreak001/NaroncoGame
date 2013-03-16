@@ -93,7 +93,7 @@ void Level::Init()
 	for(int i = 0; i < width * height; i++) blocks[i] = 0;
 	FillQuad(1,1,6,6,1);
 	FillQuad(5,5,4,4,0);
-	//FillQuad(2,5,3,4,0);
+	FillQuad(2,5,3,4,0);
 	//FillQuad(2,4,2,5,0);
 	level = glGenLists(1);
 	glNewList(level, GL_COMPILE);
