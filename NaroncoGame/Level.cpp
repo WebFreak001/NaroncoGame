@@ -62,22 +62,12 @@ void Level::FillQuad(int x0, int y0, int x1, int y1, int block)
 {
 	int temp = 0;
 	if(x0 < 0 || x1 < 0 || y0 < 0 || y1 < 0) return;
-	if(x0 > width - 1 || x1 > width - 1 || y0 > height - 1 || y1 > height - 1) return;
-	if(x0 > x1) {
-		temp = x0;
-		x0 = x1;
-		x1 = temp;
-	}
-	if(y0 > y1) {
-		temp = y0;
-		y0 = y1;
-		y1 = temp;
-	}
-	for(int xo = x0; xo < x1; xo++)
+	if(x0 + x0 > width - 1 || x1 + x1 > width - 1 || y0 + y0 > height - 1 || y1 + y1 > height - 1) return;
+	for(int xo = 0; xo < x1; xo++)
 	{
-		for(int yo = y0; yo < y1; yo++)
+		for(int yo = 0; yo < y1; yo++)
 		{
-			blocks[xo + yo * width] = block;
+			blocks[(xo + x0) + (yo + y0) * width] = block;
 		}
 	}
 }
@@ -91,10 +81,7 @@ void Level::Pixel(int x, int y, int block)
 void Level::Init()
 {
 	for(int i = 0; i < width * height; i++) blocks[i] = 0;
-	FillQuad(1,1,6,6,1);
-	FillQuad(5,5,4,4,0);
-	FillQuad(2,5,3,4,0);
-	//FillQuad(2,4,2,5,0);
+	FillQuad(3, 3, 5, 5, 1);
 	level = glGenLists(1);
 	glNewList(level, GL_COMPILE);
 		glBegin(GL_QUADS);
