@@ -104,7 +104,7 @@ bool Player::LoadContent()
 void Player::Render()
 {
 	glLoadIdentity();
-	glTranslatef(x, y, -15.0f);
+	glTranslatef(x, y, -30.0f);
 	glClearColor(0.5f, 0.8f, 1.0f, 1.0f);
 	/*glColor3f(0.8f, 0.55f, 0.0f);
 	glTranslatef(-1.0f, 0.0f, -15.0f);
@@ -123,7 +123,7 @@ void Player::Render()
 	glDisable(GL_LIGHTING);
 	glLoadIdentity();
 	glBindTexture(GL_TEXTURE_2D, charTexture);
-	glTranslatef(0.0f, 0.0f, -14.0f);
+	glTranslatef(0.0f, 0.0f, -30.0f);
 	glCallList(character);
 
 	glLoadIdentity();
