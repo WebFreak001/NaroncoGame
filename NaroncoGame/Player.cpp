@@ -23,7 +23,7 @@ bool Player::init()
 
 	character = modelLoader->Load("char.ngm", true);
 	if(character == -1) {
-		MessageBox(NULL,"Can't load Coin Model", "ERROR",MB_OK|MB_ICONERROR);
+		MessageBox(NULL,"Can't load Character Model", "ERROR",MB_OK|MB_ICONERROR);
 		return false;
 	}
 
@@ -91,7 +91,7 @@ bool Player::LoadContent()
 {
 	charTexture = SOIL_load_OGL_texture("Textures/character.dds", SOIL_LOAD_AUTO, SOIL_CREATE_NEW_ID, SOIL_FLAG_DDS_LOAD_DIRECT);
 	if(charTexture == 0) {
-		MessageBox(NULL, "Failed to Load Character Texture", "ERROR", MB_OK);
+		//MessageBox(NULL, "Failed to Load Character Texture", "ERROR", MB_OK);
 		return false;
 	}
 	glBindTexture(GL_TEXTURE_2D, charTexture);
