@@ -50,6 +50,7 @@ enum Keys {
 #include <gl\glu.h>
 #include <gl\glut.h>
 #include <SOIL.h>
+#include <mmsystem.h>
 
 using namespace std;
 #endif

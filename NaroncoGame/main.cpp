@@ -75,9 +75,13 @@ int DrawGLScene(GLvoid)
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glLoadIdentity();
-	player->Update(keys);
 	player->Render();
 	return TRUE;
+}
+
+void Tick(void)
+{
+	player->Update(keys);
 }
 
 GLvoid KillGLWindow(GLvoid)
@@ -362,8 +366,23 @@ int WINAPI WinMain(	HINSTANCE	hInstance,
 	player = new Player(0);
 	player->init();
 
+	unsigned long lastTime = timeGetTime();
+	unsigned long currentTime = 0;
+	float unprocessedTime = 0.0f;
+	float msPerTick = 1000.0f / 60.0f;
+
 	while(!done)
 	{
+		currentTime = timeGetTime();
+		unprocessedTime += (currentTime - lastTime) / msPerTick;
+		lastTime = currentTime;
+
+		while(unprocessedTime > 1.0f)
+		{
+			Tick();
+			unprocessedTime -= 1.0f;
+		}
+
 		if (PeekMessage(&msg,NULL,0,0,PM_REMOVE))
 		{
 			if (msg.message==WM_QUIT)
