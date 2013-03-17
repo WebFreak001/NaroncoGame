@@ -422,10 +422,8 @@ int WINAPI WinMain(	HINSTANCE	hInstance,
 			}
 		}
 	}
-	// rofl
 	player->deinit();
 
 	KillGLWindow();	
 	return (msg.wParam);
 }
-//ROFLMAO
