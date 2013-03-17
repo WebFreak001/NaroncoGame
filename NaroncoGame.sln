@@ -5,7 +5,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NaroncoGame", "NaroncoGame\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ModelConverter", "ModelConverter\ModelConverter.vcxproj", "{48060CDF-F29C-4EC0-80D1-EF9D21D43F99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LevelEdit", "JojoGameEdit\LevelEdit.csproj", "{FD6FB355-0E9A-4498-AB05-FDFCF7D2F7B0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LevelEdit", "LevelEdit\LevelEdit.csproj", "{FD6FB355-0E9A-4498-AB05-FDFCF7D2F7B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
