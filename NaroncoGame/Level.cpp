@@ -111,3 +111,4 @@ int Level::getBlock(int x, int y)
 	if(i < 0 || i >= width * height) return 0;
 	return blocks[i];
 }
+//test
