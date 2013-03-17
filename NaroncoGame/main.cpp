@@ -428,3 +428,4 @@ int WINAPI WinMain(	HINSTANCE	hInstance,
 	KillGLWindow();	
 	return (msg.wParam);
 }
+//ROFLMAO
