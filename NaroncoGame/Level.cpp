@@ -81,7 +81,7 @@ void Level::Pixel(int x, int y, int block)
 void Level::Init()
 {
 	for(int i = 0; i < width * height; i++) blocks[i] = 0;
-	FillQuad(3, 3, 5, 5, 1);
+	Pixel(0, 0, 1);
 	level = glGenLists(1);
 	glNewList(level, GL_COMPILE);
 		glBegin(GL_QUADS);
